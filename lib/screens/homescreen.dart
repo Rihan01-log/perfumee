@@ -24,135 +24,123 @@ class _HomescreenState extends State<Homescreen> {
         title: Text('Perfumee'),
         centerTitle: true,
       ),
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color.fromARGB(255, 228, 80, 130),
-              Color.fromARGB(255, 238, 120, 109)
-            ],
-            begin: Alignment.centerLeft,
-            end: Alignment.bottomRight,
+      body: SingleChildScrollView(
+        child: Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 228, 80, 130),
+                Color.fromARGB(255, 238, 120, 109)
+              ],
+              begin: Alignment.centerLeft,
+              end: Alignment.bottomRight,
+            ),
           ),
-        ),
-        child: Padding(
-          padding: EdgeInsets.all(10),
-          child: Column(
-            children: [
-              Gap(10),
-              Padding(
-                padding: const EdgeInsets.all(12),
-                child: Row(
+          child: Padding(
+            padding: EdgeInsets.all(10),
+            child: Column(
+              children: [
+                Gap(10),
+                Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: Row(
+                    children: [
+                      Text(
+                        'New Collection',
+                        style: TextStyle(
+                          fontSize: 30,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                CarouselSlider(
+                  items: imagesForSlider
+                      .map((imagePath) => Card(
+                            child: SizedBox(
+                              height: 200,
+                              width: double.infinity,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset(
+                                  imagePath,
+                                  fit: BoxFit.cover,
+                                  width: double.infinity,
+                                ),
+                              ),
+                            ),
+                          ))
+                      .toList(),
+                  options: CarouselOptions(
+                    viewportFraction: 1,
+                    enlargeCenterPage: true,
+                    autoPlay: true,
+                  ),
+                ),
+                Gap(10),
+                Row(
                   children: [
-                    Text(
-                      'New Collection',
-                      style: TextStyle(
-                        fontSize: 30,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Offers',
+                        style: TextStyle(fontSize: 30),
                       ),
                     ),
                   ],
                 ),
-              ),
-              CarouselSlider(
-                items: imagesForSlider
-                    .map((imagePath) => Card(
-                          child: SizedBox(
-                            height: 120,
-                            width: 500,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Image.asset(
-                                imagePath,
-                                fit: BoxFit.fitHeight,
-                                width: double.infinity,
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      for (var i = 0; i < 3; i++)
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: Card(
+                            elevation: 3,
+                            child: SizedBox(
+                              height: 200,
+                              width: 180,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                child: Image.asset(
+                                  'assets/bvlgari.avif',
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
                           ),
-                        ))
-                    .toList(),
-                options: CarouselOptions(
-                  viewportFraction: 1,
-                  enlargeCenterPage: true,
-                  autoPlay: true,
-                ),
-              ),
-              Gap(10),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      'Offers',
-                      style: TextStyle(fontSize: 30),
-                    ),
+                        ),
+                    ],
                   ),
-                ],
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Text(
+                        "More Products",
+                        style: TextStyle(fontSize: 30),
+                      ),
+                    ],
+                  ),
+                ),
+                Row(
                   children: [
-                    Card(
-                      elevation: 3,
-                      child: SizedBox(
-                        height: 200,
-                        width: 180,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(12),
-                          child: Image.asset(
-                            'assets/bvlgari.avif',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Card(
-                      elevation: 3,
-                      child: SizedBox(
-                        height: 200,
-                        width: 180,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(12),
-                          child: Image.asset(
-                            'assets/bvlgari.avif',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Card(
-                      elevation: 3,
-                      child: SizedBox(
-                        height: 200,
-                        width: 180,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(12),
-                          child: Image.asset(
-                            'assets/bvlgari.avif',
-                            fit: BoxFit.cover,
-                          ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: Card(
+                        child: SizedBox(
+                          height: 100,
+                          width: 210,
                         ),
                       ),
                     ),
                   ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Text(
-                      "More Products",
-                      style: TextStyle(fontSize: 30),
-                    ),
-                  ],
-                ),
-              ),
-             
-            ],
+                )
+              ],
+            ),
           ),
         ),
       ),
