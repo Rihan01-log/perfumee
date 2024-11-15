@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:perfumee/bottomnavigation/navigation.dart';
 import 'package:perfumee/screens/homescreen.dart';
+import 'package:perfumee/screens/splash.dart';
 
-void main(){
+void main() {
   runApp(MyApp());
 }
 
@@ -11,9 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Homescreen(
-        
-      ),
+      home: Splashscreen(),
     );
   }
 }

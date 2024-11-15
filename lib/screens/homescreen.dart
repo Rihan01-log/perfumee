@@ -127,14 +127,42 @@ class _HomescreenState extends State<Homescreen> {
                   ),
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Card(
                         child: SizedBox(
                           height: 100,
-                          width: 210,
+                          width: 179
+                          ,
                         ),
+                      ),
+                    ),
+                    Card(
+                      child: SizedBox(
+                        height: 100,
+                        width: 179,
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: Card(
+                        child: SizedBox(
+                          height: 100,
+                          width: 179,
+                        ),
+                      ),
+                    ),
+                    Card(
+                      child: SizedBox(
+                        height: 100,
+                        width: 179,
                       ),
                     ),
                   ],
