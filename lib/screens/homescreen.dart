@@ -13,7 +13,6 @@ class _HomescreenState extends State<Homescreen> {
   final imagesForSlider = [
     'assets/40189731_3-bvlgari-aqva-pour-homme-eau-de-toilette.webp',
     'assets/chanel22-removebg-preview.png',
-    
     'assets/ysl-removebg-preview.png'
   ];
 
@@ -76,9 +75,83 @@ class _HomescreenState extends State<Homescreen> {
                 options: CarouselOptions(
                   viewportFraction: 1,
                   enlargeCenterPage: true,
-                  autoPlay: false,
+                  autoPlay: true,
                 ),
               ),
+              Gap(10),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Offers',
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ),
+                ],
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Card(
+                      elevation: 3,
+                      child: SizedBox(
+                        height: 200,
+                        width: 180,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                          child: Image.asset(
+                            'assets/bvlgari.avif',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      elevation: 3,
+                      child: SizedBox(
+                        height: 200,
+                        width: 180,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                          child: Image.asset(
+                            'assets/bvlgari.avif',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      elevation: 3,
+                      child: SizedBox(
+                        height: 200,
+                        width: 180,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                          child: Image.asset(
+                            'assets/bvlgari.avif',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Text(
+                      "More Products",
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ],
+                ),
+              ),
+             
             ],
           ),
         ),
