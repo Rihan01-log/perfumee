@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:perfumee/screens/login.dart';
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
@@ -8,6 +9,15 @@ class Splashscreen extends StatefulWidget {
 }
 
 class _SplashscreenState extends State<Splashscreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Future.delayed(Duration(seconds: 3),() {
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (cts)=>Login()));
+    },);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,4 +47,6 @@ class _SplashscreenState extends State<Splashscreen> {
       ]),
     );
   }
+
+  
 }

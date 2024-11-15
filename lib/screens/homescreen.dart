@@ -94,24 +94,50 @@ class _HomescreenState extends State<Homescreen> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      for (var i = 0; i < 3; i++)
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                          child: Card(
-                            elevation: 3,
-                            child: SizedBox(
-                              height: 200,
-                              width: 180,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: Image.asset(
-                                  'assets/bvlgari.avif',
-                                  fit: BoxFit.cover,
-                                ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Card(
+                          elevation: 3,
+                          child: SizedBox(
+                            height: 200,
+                            width: 180,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(12),
+                              child: Image.asset(
+                                'assets/bvlgari.avif',
+                                fit: BoxFit.cover,
                               ),
                             ),
                           ),
                         ),
+                      ),
+                      Card(
+                        elevation: 3,
+                        child: SizedBox(
+                          height: 200,
+                          width: 180,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.asset(
+                              'assets/bvlgari.avif',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Card(
+                          elevation: 3,
+                          child: SizedBox(
+                            height: 200,
+                            width: 180,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(12),
+                              child: Image.asset(
+                                'assets/bvlgari.avif',
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ))
                     ],
                   ),
                 ),
@@ -133,17 +159,22 @@ class _HomescreenState extends State<Homescreen> {
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Card(
                         child: SizedBox(
-                          height: 100,
-                          width: 179
-                          ,
-                        ),
+                            height: 100,
+                            width: 179,
+                            child: Image.asset(
+                              'assets/bvlgari.avif',
+                              fit: BoxFit.cover,
+                            )),
                       ),
                     ),
                     Card(
                       child: SizedBox(
-                        height: 100,
-                        width: 179,
-                      ),
+                          height: 100,
+                          width: 179,
+                          child: Image.asset(
+                            'assets/bvlgari.avif',
+                            fit: BoxFit.cover,
+                          )),
                     ),
                   ],
                 ),
@@ -156,14 +187,21 @@ class _HomescreenState extends State<Homescreen> {
                         child: SizedBox(
                           height: 100,
                           width: 179,
+                          child: Image.asset(
+                            'assets/bvlgari.avif',
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
                     Card(
                       child: SizedBox(
-                        height: 100,
-                        width: 179,
-                      ),
+                          height: 100,
+                          width: 179,
+                          child: Image.asset(
+                            'assets/bvlgari.avif',
+                            fit: BoxFit.cover,
+                          )),
                     ),
                   ],
                 )
