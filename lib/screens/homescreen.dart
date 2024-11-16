@@ -161,9 +161,12 @@ class _HomescreenState extends State<Homescreen> {
                         child: SizedBox(
                             height: 100,
                             width: 179,
-                            child: Image.asset(
-                              'assets/bvlgari.avif',
-                              fit: BoxFit.cover,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: Image.asset(
+                                'assets/bvlgari.avif',
+                                fit: BoxFit.cover,
+                              ),
                             )),
                       ),
                     ),
@@ -171,9 +174,12 @@ class _HomescreenState extends State<Homescreen> {
                       child: SizedBox(
                           height: 100,
                           width: 179,
-                          child: Image.asset(
-                            'assets/bvlgari.avif',
-                            fit: BoxFit.cover,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/bvlgari.avif',
+                              fit: BoxFit.cover,
+                            ),
                           )),
                     ),
                   ],
@@ -187,9 +193,12 @@ class _HomescreenState extends State<Homescreen> {
                         child: SizedBox(
                           height: 100,
                           width: 179,
-                          child: Image.asset(
-                            'assets/bvlgari.avif',
-                            fit: BoxFit.cover,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/bvlgari.avif',
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
@@ -198,9 +207,12 @@ class _HomescreenState extends State<Homescreen> {
                       child: SizedBox(
                           height: 100,
                           width: 179,
-                          child: Image.asset(
-                            'assets/bvlgari.avif',
-                            fit: BoxFit.cover,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/bvlgari.avif',
+                              fit: BoxFit.cover,
+                            ),
                           )),
                     ),
                   ],
