@@ -3,6 +3,7 @@ import 'package:perfumee/bottomnavigation/navigation.dart';
 import 'package:perfumee/screens/homescreen.dart';
 import 'package:perfumee/screens/login.dart';
 import 'package:perfumee/screens/splash.dart';
+import 'package:perfumee/screens/cart.dart';
 
 void main() {
   runApp(MyApp());

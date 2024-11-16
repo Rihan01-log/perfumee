@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:perfumee/bottomnavigation/navigation.dart';
 import 'package:perfumee/screens/homescreen.dart';
 import 'package:perfumee/screens/signin.dart';
 
@@ -44,7 +45,7 @@ class _LoginState extends State<Login> {
               ElevatedButton.icon(
                 onPressed: () {
                   Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (ctx) => Homescreen()));
+                      MaterialPageRoute(builder: (ctx) => NavigatioPage()));
                 },
                 style: ElevatedButton.styleFrom(
                     minimumSize: Size(140, 40),
@@ -56,8 +57,8 @@ class _LoginState extends State<Login> {
               Gap(10),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (ctx) => Signin()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (ctx) => NavigatioPage()));
                 },
                 child: Text('Sign In'),
                 style: ElevatedButton.styleFrom(

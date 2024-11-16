@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:perfumee/screens/cart.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -204,16 +205,21 @@ class _HomescreenState extends State<Homescreen> {
                       ),
                     ),
                     Card(
-                      child: SizedBox(
-                          height: 100,
-                          width: 179,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Image.asset(
-                              'assets/bvlgari.avif',
-                              fit: BoxFit.cover,
-                            ),
-                          )),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (ctx)=>CartPage()));
+                        },
+                        child: SizedBox(
+                            height: 100,
+                            width: 179,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: Image.asset(
+                                'assets/bvlgari.avif',
+                                fit: BoxFit.cover,
+                              ),
+                            )),
+                      ),
                     ),
                   ],
                 )
