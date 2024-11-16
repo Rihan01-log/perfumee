@@ -27,7 +27,9 @@ class _NavigatioPageState extends State<NavigatioPage> {
         ],
         centerIcon: Icons.place,
         selectedIndex: currentIndex,
-        onItemPressed: (p0) {},
+        onItemPressed: (p0) {
+        
+        },
       ),
     );
   }

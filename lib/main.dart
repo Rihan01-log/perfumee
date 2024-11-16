@@ -4,6 +4,7 @@ import 'package:perfumee/screens/homescreen.dart';
 import 'package:perfumee/screens/login.dart';
 import 'package:perfumee/screens/splash.dart';
 import 'package:perfumee/screens/cart.dart';
+import 'package:perfumee/screens/wishlist.dart';
 
 void main() {
   runApp(MyApp());
