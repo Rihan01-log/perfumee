@@ -1,7 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:perfumee/screens/cart.dart';
+
+import 'package:perfumee/screens/yslitems.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -191,8 +192,6 @@ class _HomescreenState extends State<Homescreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
-
-                      
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Card(
                         child: SizedBox(
@@ -212,7 +211,7 @@ class _HomescreenState extends State<Homescreen> {
                       child: GestureDetector(
                         onTap: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (ctx) => CartPage()));
+                              MaterialPageRoute(builder: (ctx) => YslItems()));
                         },
                         child: SizedBox(
                             height: 100,
