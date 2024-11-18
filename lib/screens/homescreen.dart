@@ -160,28 +160,30 @@ class _HomescreenState extends State<Homescreen> {
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Card(
                         child: SizedBox(
-                            height: 100,
-                            width: 179,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Image.asset(
-                                'assets/bvlgari.avif',
-                                fit: BoxFit.cover,
-                              ),
-                            )),
-                      ),
-                    ),
-                    Card(
-                      child: SizedBox(
                           height: 100,
                           width: 179,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(10),
                             child: Image.asset(
-                              'assets/bvlgari.avif',
+                              'assets/chanel bluemen.webp',
                               fit: BoxFit.cover,
                             ),
-                          )),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      child: SizedBox(
+                        height: 100,
+                        width: 179,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.asset(
+                            'assets/gucii deghjkm,l;.jpg',
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -189,6 +191,8 @@ class _HomescreenState extends State<Homescreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
+
+                      
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Card(
                         child: SizedBox(
@@ -197,8 +201,8 @@ class _HomescreenState extends State<Homescreen> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(10),
                             child: Image.asset(
-                              'assets/bvlgari.avif',
-                              fit: BoxFit.cover,
+                              'assets/40189731_3-bvlgari-aqva-pour-homme-eau-de-toilette.webp',
+                              fit: BoxFit.fill,
                             ),
                           ),
                         ),
@@ -207,7 +211,8 @@ class _HomescreenState extends State<Homescreen> {
                     Card(
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (ctx)=>CartPage()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (ctx) => CartPage()));
                         },
                         child: SizedBox(
                             height: 100,
@@ -215,8 +220,8 @@ class _HomescreenState extends State<Homescreen> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: Image.asset(
-                                'assets/bvlgari.avif',
-                                fit: BoxFit.cover,
+                                'assets/ysl-removebg-preview.png',
+                                fit: BoxFit.fill,
                               ),
                             )),
                       ),

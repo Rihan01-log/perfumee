@@ -1,7 +1,7 @@
-import 'package:diamond_bottom_bar/diamond_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:perfumee/screens/homescreen.dart';
 import 'package:perfumee/screens/cart.dart';
+import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class NavigatioPage extends StatefulWidget {
   const NavigatioPage({super.key});
@@ -17,20 +17,19 @@ class _NavigatioPageState extends State<NavigatioPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: perfumeePages[currentIndex],
-      bottomNavigationBar: DiamondBottomNavigation(
-        height: 50,
-        itemIcons: const [
-          Icons.home,
-          Icons.notifications,
-          Icons.message,
-          Icons.account_box,
-        ],
-        centerIcon: Icons.place,
-        selectedIndex: currentIndex,
-        onItemPressed: (p0) {
-        
+      bottomNavigationBar: SalomonBottomBar(
+        onTap: (index){
+          setState(() {
+            currentIndex=index;
+          });
         },
-      ),
+        currentIndex: currentIndex, items: [
+        SalomonBottomBarItem(icon: Icon(Icons.home), title: Text('Home')),
+        SalomonBottomBarItem(
+            icon: Icon(Icons.shopping_cart), title: Text('Cart')),
+        SalomonBottomBarItem(icon: Icon(Icons.pie_chart), title: Text('Chart')),
+        SalomonBottomBarItem(icon: Icon(Icons.person), title: Text('Profile'))
+      ]),
     );
   }
 }

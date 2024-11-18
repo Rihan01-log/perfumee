@@ -50,15 +50,13 @@ class _WishlistState extends State<Wishlist> {
                                 fontSize: 15, fontWeight: FontWeight.bold),
                           ),
                           Text('Perfume de Beauty\n 100ml'),
-
                         ],
                       ),
-                      
                     ),
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

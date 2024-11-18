@@ -65,14 +65,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
-  diamond_bottom_bar:
-    dependency: "direct main"
-    description:
-      name: diamond_bottom_bar
-      sha256: "72f76a3b9bc213a56bd9d2006589cce174036e801714d25daca5344d1a16857d"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.0"
   fake_async:
     dependency: transitive
     description:
@@ -267,6 +259,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+  salomon_bottom_bar:
+    dependency: "direct main"
+    description:
+      name: salomon_bottom_bar
+      sha256: e20abf2e449749432223a8b4e6647c212eef6c2b638e0ed8cc92eff9529c2b48
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.3.2"
   sky_engine:
     dependency: transitive
     description: flutter

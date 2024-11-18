@@ -21,276 +21,278 @@ class _CartPageState extends State<CartPage> {
         color: Colors.red,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Card(
-                    child: Container(
-                      color: Colors.white,
-                      height: 240,
-                      width: 184,
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Image.asset(
-                              'assets/ysl-removebg-preview.png',
-                              height: 100,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Card(
+                      child: Container(
+                        color: Colors.white,
+                        height: 240,
+                        width: 184,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image.asset(
+                                'assets/ysl-removebg-preview.png',
+                                height: 100,
+                              ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(3.0),
-                            child: Row(
-                              children: [
-                                Text(
-                                  'Yves Saint Laurent',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Icon(Icons.heart_broken)
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.all(3.0),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    'Yves Saint Laurent',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Icon(Icons.star)
+                                ],
+                              ),
                             ),
-                          ),
-                          Gap(2),
-                          Row(
-                            children: [Text('Perfume de Beauty\n 100ml')],
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Add cart'),
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.yellow),
-                          )
-                        ],
+                            Gap(2),
+                            Row(
+                              children: [Text('Perfume de Beauty\n 100ml')],
+                            ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: Text('Add cart'),
+                              style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.yellow),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  Card(
-                    child: Container(
-                      color: Colors.white,
-                      height: 240,
-                      width: 184,
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Image.asset(
-                              'assets/ysl-removebg-preview.png',
-                              height: 100,
+                    Card(
+                      child: Container(
+                        color: Colors.white,
+                        height: 240,
+                        width: 184,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image.asset(
+                                'assets/ysl-removebg-preview.png',
+                                height: 100,
+                              ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(3.0),
-                            child: Row(
-                              children: [
-                                Text(
-                                  'Yves Saint Laurent',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Icon(Icons.heart_broken)
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.all(3.0),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    'Yves Saint Laurent',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Icon(Icons.star)
+                                ],
+                              ),
                             ),
-                          ),
-                          Gap(2),
-                          Row(
-                            children: [Text('Perfume de Beauty\n 100ml')],
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Add cart'),
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.yellow),
-                          )
-                        ],
+                            Gap(2),
+                            Row(
+                              children: [Text('Perfume de Beauty\n 100ml')],
+                            ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: Text('Add cart'),
+                              style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.yellow),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Card(
-                    child: Container(
-                      color: Colors.white,
-                      height: 240,
-                      width: 184,
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Image.asset(
-                              'assets/ysl-removebg-preview.png',
-                              height: 100,
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Card(
+                      child: Container(
+                        color: Colors.white,
+                        height: 240,
+                        width: 184,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image.asset(
+                                'assets/ysl-removebg-preview.png',
+                                height: 100,
+                              ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(3.0),
-                            child: Row(
-                              children: [
-                                Text(
-                                  'Yves Saint Laurent',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Icon(Icons.heart_broken)
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.all(3.0),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    'Yves Saint Laurent',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Icon(Icons.star)
+                                ],
+                              ),
                             ),
-                          ),
-                          Gap(2),
-                          Row(
-                            children: [Text('Perfume de Beauty\n 100ml')],
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Add cart'),
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.yellow),
-                          )
-                        ],
+                            Gap(2),
+                            Row(
+                              children: [Text('Perfume de Beauty\n 100ml')],
+                            ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: Text('Add cart'),
+                              style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.yellow),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  Card(
-                    child: Container(
-                      color: Colors.white,
-                      height: 240,
-                      width: 184,
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Image.asset(
-                              'assets/ysl-removebg-preview.png',
-                              height: 100,
+                    Card(
+                      child: Container(
+                        color: Colors.white,
+                        height: 240,
+                        width: 184,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image.asset(
+                                'assets/ysl-removebg-preview.png',
+                                height: 100,
+                              ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(3.0),
-                            child: Row(
-                              children: [
-                                Text(
-                                  'Yves Saint Laurent',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Icon(Icons.heart_broken)
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.all(3.0),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    'Yves Saint Laurent',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Icon(Icons.star)
+                                ],
+                              ),
                             ),
-                          ),
-                          Gap(2),
-                          Row(
-                            children: [Text('Perfume de Beauty\n 100ml')],
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Add cart'),
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.yellow),
-                          )
-                        ],
+                            Gap(2),
+                            Row(
+                              children: [Text('Perfume de Beauty\n 100ml')],
+                            ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: Text('Add cart'),
+                              style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.yellow),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Card(
-                    child: Container(
-                      color: Colors.white,
-                      height: 240,
-                      width: 184,
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Image.asset(
-                              'assets/ysl-removebg-preview.png',
-                              height: 100,
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Card(
+                      child: Container(
+                        color: Colors.white,
+                        height: 240,
+                        width: 184,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image.asset(
+                                'assets/ysl-removebg-preview.png',
+                                height: 100,
+                              ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(3.0),
-                            child: Row(
-                              children: [
-                                Text(
-                                  'Yves Saint Laurent',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Icon(Icons.heart_broken)
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.all(3.0),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    'Yves Saint Laurent',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Icon(Icons.star)
+                                ],
+                              ),
                             ),
-                          ),
-                          Gap(2),
-                          Row(
-                            children: [Text('Perfume de Beauty\n 100ml')],
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Add cart'),
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.yellow),
-                          )
-                        ],
+                            Gap(2),
+                            Row(
+                              children: [Text('Perfume de Beauty\n 100ml')],
+                            ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: Text('Add cart'),
+                              style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.yellow),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  Card(
-                    child: Container(
-                      color: Colors.white,
-                      height: 240,
-                      width: 184,
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Image.asset(
-                              'assets/ysl-removebg-preview.png',
-                              height: 100,
+                    Card(
+                      child: Container(
+                        color: Colors.white,
+                        height: 240,
+                        width: 184,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image.asset(
+                                'assets/ysl-removebg-preview.png',
+                                height: 100,
+                              ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(3.0),
-                            child: Row(
-                              children: [
-                                Text(
-                                  'Yves Saint Laurent',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Icon(Icons.heart_broken)
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.all(3.0),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    'Yves Saint Laurent',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Icon(Icons.star)
+                                ],
+                              ),
                             ),
-                          ),
-                          Gap(2),
-                          Row(
-                            children: [Text('Perfume de Beauty\n 100ml')],
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Add cart'),
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.yellow),
-                          )
-                        ],
+                            Gap(2),
+                            Row(
+                              children: [Text('Perfume de Beauty\n 100ml')],
+                            ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: Text('Add cart'),
+                              style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.yellow),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              )
-            ],
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),
