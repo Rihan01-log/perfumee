@@ -51,7 +51,9 @@ class _YslItemsState extends State<YslItems> {
       appBar: AppBar(
         backgroundColor: Colors.red,
         title: const Text("YSL Items"),
+        centerTitle: true,
       ),
+      
       body: Container(
         color: Colors.red,
         child: Padding(

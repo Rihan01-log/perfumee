@@ -13,6 +13,7 @@ class NavigatioPage extends StatefulWidget {
 
 class _NavigatioPageState extends State<NavigatioPage> {
   int currentIndex = 0;
+
   final List<Widget> perfumeePages = [
     Homescreen(),
     Cart(),

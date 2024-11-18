@@ -11,7 +11,24 @@ class _CartState extends State<Cart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(
+          'PERFUMEE',
+          style: TextStyle(fontStyle: FontStyle.italic),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.red,
+      ),
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        color: Colors.red,
+        child: Column(
+          children: [
+            
+          ],
+        ),
+      ),
     );
   }
 }
