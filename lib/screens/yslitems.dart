@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:perfumee/screens/viewandbuy.dart';
 
 class YslItems extends StatefulWidget {
   const YslItems({super.key});
@@ -53,7 +54,6 @@ class _YslItemsState extends State<YslItems> {
         title: const Text("YSL Items"),
         centerTitle: true,
       ),
-      
       body: Container(
         color: Colors.red,
         child: Padding(
@@ -86,57 +86,63 @@ class _YslItemsState extends State<YslItems> {
     required String image,
     required VoidCallback onAddToCart,
   }) {
-    return Container(
-      height: 160,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
-        color: Colors.amber,
-      ),
-      child: Row(
-        children: [
-          Image.asset(
-            image,
-            height: 100,
-            width: 100,
-            fit: BoxFit.contain,
-          ),
-          const Gap(10),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    name,
-                    style: const TextStyle(
-                        fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                  const Gap(5),
-                  Text(
-                    "M.R.P: $price",
-                    style: const TextStyle(fontSize: 16),
-                  ),
-                  Text(
-                    volume,
-                    style: const TextStyle(fontSize: 16),
-                  ),
-                  const Gap(10),
-                  ElevatedButton(
-                    onPressed: onAddToCart,
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.yellow,
-                      foregroundColor: Colors.black,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (ctx) => Viewandbuy()));
+      },
+      child: Container(
+        height: 160,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          color: Colors.amber,
+        ),
+        child: Row(
+          children: [
+            Image.asset(
+              image,
+              height: 100,
+              width: 100,
+              fit: BoxFit.contain,
+            ),
+            const Gap(10),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      name,
+                      style: const TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold),
                     ),
-                    child: const Text("Add to Cart"),
-                  ),
-                ],
+                    const Gap(5),
+                    Text(
+                      "M.R.P: $price",
+                      style: const TextStyle(fontSize: 16),
+                    ),
+                    Text(
+                      volume,
+                      style: const TextStyle(fontSize: 16),
+                    ),
+                    const Gap(10),
+                    ElevatedButton(
+                      onPressed: onAddToCart,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.yellow,
+                        foregroundColor: Colors.black,
+                      ),
+                      child: const Text("Add to Cart"),
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

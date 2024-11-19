@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:perfumee/bottomnavigation/addpage.dart';
 import 'package:perfumee/screens/homescreen.dart';
-import 'package:perfumee/screens/cart.dart';
+
 import 'package:perfumee/screens/piechart.dart';
 import 'package:perfumee/screens/profile.dart';
 
@@ -18,9 +19,9 @@ class _NavigatioPageState extends State<NavigatioPage> {
 
   final List<Widget> perfumeePages = [
     Homescreen(),
-    Cart(),
+    Addpage(),
     Piechart(),
-    Profilepage()
+    Profilepage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -35,8 +36,7 @@ class _NavigatioPageState extends State<NavigatioPage> {
           currentIndex: currentIndex,
           items: [
             SalomonBottomBarItem(icon: Icon(Icons.home), title: Text('Home')),
-            SalomonBottomBarItem(
-                icon: Icon(Icons.shopping_cart), title: Text('Cart')),
+            SalomonBottomBarItem(icon: Icon(Icons.add), title: Text('Add')),
             SalomonBottomBarItem(
                 icon: Icon(Icons.pie_chart), title: Text('Chart')),
             SalomonBottomBarItem(
