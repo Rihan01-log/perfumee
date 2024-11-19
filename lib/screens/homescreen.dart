@@ -15,7 +15,8 @@ class _HomescreenState extends State<Homescreen> {
   final imagesForSlider = [
     'assets/40189731_3-bvlgari-aqva-pour-homme-eau-de-toilette.webp',
     'assets/chanel22-removebg-preview.png',
-    'assets/ysl-removebg-preview.png'
+    'assets/ysl-removebg-preview.png',
+    'assets/Gemini_Generated_Image_iv2noviv2noviv2n.jpg'
   ];
 
   @override
@@ -60,16 +61,12 @@ class _HomescreenState extends State<Homescreen> {
                 CarouselSlider(
                   items: imagesForSlider
                       .map((imagePath) => Card(
-                            child: SizedBox(
-                              height: 200,
-                              width: double.infinity,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(10),
-                                child: Image.asset(
-                                  imagePath,
-                                  fit: BoxFit.cover,
-                                  width: double.infinity,
-                                ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: Image.asset(
+                                imagePath,
+                                fit: BoxFit.fitHeight,
+                                width: double.infinity,
                               ),
                             ),
                           ))
