@@ -1,6 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:perfumee/screens/bvulgariitems.dart';
+import 'package:perfumee/screens/chanelitems.dart';
+import 'package:perfumee/screens/gucciitems.dart';
 
 import 'package:perfumee/screens/yslitems.dart';
 
@@ -24,7 +27,10 @@ class _HomescreenState extends State<Homescreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 228, 80, 130),
-        title: Text('Perfumee'),
+        title: Text(
+          'PERFUMEE',
+          style: TextStyle(fontStyle: FontStyle.italic),
+        ),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -103,7 +109,7 @@ class _HomescreenState extends State<Homescreen> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(12),
                               child: Image.asset(
-                                'assets/bvlgari.avif',
+                                'assets/gucci234.png',
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -118,8 +124,8 @@ class _HomescreenState extends State<Homescreen> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(12),
                             child: Image.asset(
-                              'assets/bvlgari.avif',
-                              fit: BoxFit.cover,
+                              'assets/ysl12345.webp',
+                              fit: BoxFit.fill,
                             ),
                           ),
                         ),
@@ -156,29 +162,45 @@ class _HomescreenState extends State<Homescreen> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Card(
-                        child: SizedBox(
-                          height: 100,
-                          width: 179,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Image.asset(
-                              'assets/chanel bluemen.webp',
-                              fit: BoxFit.cover,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (ctx) => Chanelitems()));
+                        },
+                        child: Card(
+                          child: SizedBox(
+                            height: 100,
+                            width: 179,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: Image.asset(
+                                'assets/chanel bluemen.webp',
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
                     Card(
-                      child: SizedBox(
-                        height: 100,
-                        width: 179,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
-                          child: Image.asset(
-                            'assets/gucii deghjkm,l;.jpg',
-                            fit: BoxFit.fill,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (ctx) => Gucciitems()));
+                        },
+                        child: SizedBox(
+                          height: 100,
+                          width: 179,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/gucii deghjkm,l;.jpg',
+                              fit: BoxFit.fill,
+                            ),
                           ),
                         ),
                       ),
@@ -190,15 +212,23 @@ class _HomescreenState extends State<Homescreen> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Card(
-                        child: SizedBox(
-                          height: 100,
-                          width: 179,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Image.asset(
-                              'assets/40189731_3-bvlgari-aqva-pour-homme-eau-de-toilette.webp',
-                              fit: BoxFit.fill,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (ctx) => Bvulgariitems()));
+                        },
+                        child: Card(
+                          child: SizedBox(
+                            height: 100,
+                            width: 179,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: Image.asset(
+                                'assets/40189731_3-bvlgari-aqva-pour-homme-eau-de-toilette.webp',
+                                fit: BoxFit.fill,
+                              ),
                             ),
                           ),
                         ),

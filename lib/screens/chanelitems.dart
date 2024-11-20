@@ -2,41 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:perfumee/screens/viewandbuy.dart';
 
-class YslItems extends StatefulWidget {
-  const YslItems({super.key});
+class Chanelitems extends StatefulWidget {
+  const Chanelitems({super.key});
 
   @override
-  State<YslItems> createState() => _YslItemsState();
+  State<Chanelitems> createState() => _ChanelitemsState();
 }
 
-class _YslItemsState extends State<YslItems> {
-  final List<Map<String, dynamic>> yslProducts = [
+class _ChanelitemsState extends State<Chanelitems> {
+  final List<Map<String, dynamic>> chanelProducts = [
     {
-      "name": "Ysl perfume mens",
-      "price": "₹1000",
+      "name": "Chanel perfume mens",
+      "price": "₹9000",
       "volume": "100ml",
-      "image": "assets/ysl-removebg-preview.png"
+      "image": "assets/chanel bluemen.webp"
     },
     {
-      "name": "Ysl perfume mens",
-      "price": "₹1000",
+      "name": "Chanel perfume mens",
+      "price": "₹9000",
       "volume": "100ml",
-      "image": "assets/ysl-removebg-preview.png"
+      "image": "assets/chanel bluemen.webp"
     },
     {
-      "name": "Ysl perfume mens",
-      "price": "₹1000",
+      "name": "Chanel perfume mens",
+      "price": "₹9000",
       "volume": "100ml",
-      "image": "assets/ysl-removebg-preview.png"
+      "image": "assets/chanel bluemen.webp"
     },
     {
-      "name": "Ysl perfume mens",
-      "price": "₹1000",
+      "name": "Chanel perfume mens",
+      "price": "₹9000",
       "volume": "100ml",
-      "image": "assets/ysl-removebg-preview.png"
+      "image": "assets/chanel bluemen.webp"
     },
   ];
-
   void _addToCart(String name) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
@@ -51,8 +50,7 @@ class _YslItemsState extends State<YslItems> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        
-        title: const Text("YSL Items"),
+        title: const Text("Chanel Items"),
         centerTitle: true,
       ),
       body: Container(
@@ -60,12 +58,12 @@ class _YslItemsState extends State<YslItems> {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: ListView.builder(
-            itemCount: yslProducts.length,
+            itemCount: chanelProducts.length,
             itemBuilder: (context, index) {
-              final product = yslProducts[index];
+              final product = chanelProducts[index];
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 5.0),
-                child: buildYslItemCard(
+                child: buildChanelItemCard(
                   name: product["name"],
                   price: product["price"],
                   volume: product["volume"],
@@ -80,7 +78,7 @@ class _YslItemsState extends State<YslItems> {
     );
   }
 
-  Widget buildYslItemCard({
+  Widget buildChanelItemCard({
     required String name,
     required String price,
     required String volume,
