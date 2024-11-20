@@ -21,13 +21,13 @@ class _YslItemsState extends State<YslItems> {
       "name": "Ysl perfume mens",
       "price": "₹1000",
       "volume": "100ml",
-      "image": "assets/ysl-removebg-preview.png"
+      "image": "assets/yslcarousal.webp"
     },
     {
       "name": "Ysl perfume mens",
       "price": "₹1000",
       "volume": "100ml",
-      "image": "assets/ysl-removebg-preview.png"
+      "image": "assets/ysl12345.webp"
     },
     {
       "name": "Ysl perfume mens",
@@ -50,13 +50,21 @@ class _YslItemsState extends State<YslItems> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
-        
-        title: const Text("YSL Items"),
+        backgroundColor: Colors.black,
+        title: const Text(
+          "YSL Items",
+          style: TextStyle(color: Colors.white),
+        ),
         centerTitle: true,
       ),
       body: Container(
-        color: Colors.red,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.black, Colors.white],
+            begin: Alignment.centerLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: ListView.builder(
@@ -118,16 +126,18 @@ class _YslItemsState extends State<YslItems> {
                     Text(
                       name,
                       style: const TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.bold),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
                     ),
                     const Gap(5),
                     Text(
                       "M.R.P: $price",
-                      style: const TextStyle(fontSize: 16),
+                      style: const TextStyle(fontSize: 16, color: Colors.white),
                     ),
                     Text(
                       volume,
-                      style: const TextStyle(fontSize: 16),
+                      style: const TextStyle(fontSize: 16, color: Colors.white),
                     ),
                     const Gap(10),
                     ElevatedButton(

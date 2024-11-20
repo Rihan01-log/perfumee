@@ -44,16 +44,27 @@ class _BvulgariitemsState extends State<Bvulgariitems> {
       ),
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
-        title: const Text("Bvulgari Items"),
+        backgroundColor: Colors.black,
+        title: const Text(
+          "Bvulgari Items",
+          style: TextStyle(color: Colors.white),
+          
+        ),
         centerTitle: true,
       ),
       body: Container(
-        color: Colors.red,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.black, Colors.white],
+            begin: Alignment.centerLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: ListView.builder(
@@ -76,7 +87,8 @@ class _BvulgariitemsState extends State<Bvulgariitems> {
       ),
     );
   }
-   Widget buildBvulgariItemCard({
+
+  Widget buildBvulgariItemCard({
     required String name,
     required String price,
     required String volume,

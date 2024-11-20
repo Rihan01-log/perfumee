@@ -20,10 +20,10 @@ class _ViewandbuyState extends State<Viewandbuy> {
               fit: BoxFit.cover,
             ),
           ),
-          Row(
+          const Row(
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   'Yves Saint Laurent Y Eau De Parfum\n100ml\nRating:4.5/5',
                   style: TextStyle(fontSize: 18),
@@ -33,9 +33,9 @@ class _ViewandbuyState extends State<Viewandbuy> {
           ),
           ElevatedButton(
             onPressed: () {},
-            child: Text('Buy ₹1000'),
             style: ElevatedButton.styleFrom(
-                minimumSize: Size(190, 40), backgroundColor: Colors.amber),
+                minimumSize: const Size(190, 40), backgroundColor: Colors.amber),
+            child: const Text('Buy ₹1000'),
           )
         ],
       ),

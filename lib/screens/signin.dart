@@ -14,8 +14,13 @@ class _SigninState extends State<Signin> {
     return Scaffold(
       body: Center(
         child: Container(
-          decoration:
-              const BoxDecoration(color: Color.fromARGB(255, 247, 124, 115)),
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.black, Colors.white],
+              begin: Alignment.centerLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -57,8 +62,14 @@ class _SigninState extends State<Signin> {
                 style: ElevatedButton.styleFrom(
                     minimumSize: const Size(140, 40),
                     backgroundColor: Colors.blueAccent),
-                label: const Text('SignIn'),
-                icon: const Icon(Icons.home),
+                label: const Text(
+                  'SignIn',
+                  style: TextStyle(color: Colors.white),
+                ),
+                icon: const Icon(
+                  Icons.home,
+                  color: Colors.black,
+                ),
               ),
             ],
           ),

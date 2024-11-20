@@ -13,8 +13,8 @@ class _SplashscreenState extends State<Splashscreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(Duration(seconds: 3),() {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (cts)=>Login()));
+    Future.delayed(const Duration(seconds: 3),() {
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (cts)=>const Login()));
     },);
   }
 
@@ -24,13 +24,13 @@ class _SplashscreenState extends State<Splashscreen> {
       body: Stack(children: [
         Container(
           height: double.infinity,
-          decoration: BoxDecoration(),
+          decoration: const BoxDecoration(),
           child: Image.asset(
             'assets/Gemini_Generated_Image_lh4rh1lh4rh1lh4r.jpg',
             fit: BoxFit.cover,
           ),
         ),
-        Positioned(
+        const Positioned(
           top: 120,
           left: 140,
           child: Align(

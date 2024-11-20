@@ -49,12 +49,21 @@ class _ChanelitemsState extends State<Chanelitems> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
-        title: const Text("Chanel Items"),
+        backgroundColor: Colors.black,
+        title: const Text(
+          "Chanel Items",
+          style: TextStyle(color: Colors.white),
+        ),
         centerTitle: true,
       ),
       body: Container(
-        color: Colors.red,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.black, Colors.white],
+            begin: Alignment.centerLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: ListView.builder(
@@ -88,7 +97,7 @@ class _ChanelitemsState extends State<Chanelitems> {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (ctx) => Viewandbuy()));
+            context, MaterialPageRoute(builder: (ctx) => const Viewandbuy()));
       },
       child: Container(
         height: 160,

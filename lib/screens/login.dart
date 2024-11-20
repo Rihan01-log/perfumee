@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:perfumee/bottomnavigation/navigation.dart';
+import 'package:perfumee/screens/signin.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -15,8 +16,13 @@ class _LoginState extends State<Login> {
     return Scaffold(
       body: Center(
         child: Container(
-          decoration:
-              const BoxDecoration(color: Color.fromARGB(255, 247, 124, 115)),
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.black, Colors.white],
+              begin: Alignment.centerLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -25,6 +31,7 @@ class _LoginState extends State<Login> {
                 child: TextFormField(
                     decoration: InputDecoration(
                   hintText: 'Email',
+                  hintStyle: const TextStyle(color: Colors.white),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -35,6 +42,7 @@ class _LoginState extends State<Login> {
                 child: TextFormField(
                     decoration: InputDecoration(
                   hintText: 'Password',
+                  hintStyle: const TextStyle(color: Colors.white),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -42,25 +50,33 @@ class _LoginState extends State<Login> {
               ),
               ElevatedButton.icon(
                 onPressed: () {
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (ctx) => const NavigatioPage()));
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (ctx) => const NavigatioPage()));
                 },
                 style: ElevatedButton.styleFrom(
                     minimumSize: const Size(140, 40),
                     backgroundColor: Colors.blueAccent),
-                label: const Text('Login'),
+                label:
+                    const Text('Login', style: TextStyle(color: Colors.white)),
                 icon: const Icon(Icons.home),
               ),
               const Text('Don\'t have any acoount '),
               const Gap(10),
-              ElevatedButton(
+              ElevatedButton.icon(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (ctx) => const NavigatioPage()));
+                      MaterialPageRoute(builder: (ctx) => const Signin()));
                 },
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue, minimumSize: const Size(140, 40)),
-                child: const Text('Sign In'),
+                    backgroundColor: Colors.blue,
+                    minimumSize: const Size(140, 40)),
+                icon: const Icon(Icons.sign_language),
+                label: const Text(
+                  'Sign In',
+                  style: TextStyle(color: Colors.white),
+                ),
               )
             ],
           ),

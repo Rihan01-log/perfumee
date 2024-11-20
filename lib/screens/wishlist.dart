@@ -39,9 +39,9 @@ class _WishlistState extends State<Wishlist> {
                         )
                       ],
                     ),
-                    Gap(20),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 25),
+                    const Gap(20),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 25),
                       child: Column(
                         children: [
                           Text(

@@ -16,20 +16,20 @@ class Homescreen extends StatefulWidget {
 
 class _HomescreenState extends State<Homescreen> {
   final imagesForSlider = [
-    'assets/40189731_3-bvlgari-aqva-pour-homme-eau-de-toilette.webp',
-    'assets/chanel22-removebg-preview.png',
-    'assets/ysl-removebg-preview.png',
-    'assets/Gemini_Generated_Image_iv2noviv2noviv2n.jpg'
+    'assets/yslcarousal.webp',
+    'assets/guccicarousal.jpg',
+    'assets/bvlgaricarousal.avif',
+    'assets/newbvlgaricarousal.avif'
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 228, 80, 130),
+        backgroundColor: Colors.black,
         title: const Text(
           'PERFUMEE',
-          style: TextStyle(fontStyle: FontStyle.italic),
+          style: TextStyle(fontStyle: FontStyle.italic, color: Colors.white),
         ),
         centerTitle: true,
       ),
@@ -38,10 +38,7 @@ class _HomescreenState extends State<Homescreen> {
           width: double.infinity,
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 228, 80, 130),
-                Color.fromARGB(255, 238, 120, 109)
-              ],
+              colors: [Colors.black, Colors.white],
               begin: Alignment.centerLeft,
               end: Alignment.bottomRight,
             ),
@@ -57,9 +54,7 @@ class _HomescreenState extends State<Homescreen> {
                     children: [
                       Text(
                         'New Collection',
-                        style: TextStyle(
-                          fontSize: 30,
-                        ),
+                        style: TextStyle(fontSize: 30, color: Colors.white),
                       ),
                     ],
                   ),
@@ -71,7 +66,7 @@ class _HomescreenState extends State<Homescreen> {
                               borderRadius: BorderRadius.circular(10),
                               child: Image.asset(
                                 imagePath,
-                                fit: BoxFit.fitHeight,
+                                fit: BoxFit.fill,
                                 width: double.infinity,
                               ),
                             ),
@@ -90,7 +85,7 @@ class _HomescreenState extends State<Homescreen> {
                       padding: EdgeInsets.all(8.0),
                       child: Text(
                         'Offers',
-                        style: TextStyle(fontSize: 30),
+                        style: TextStyle(fontSize: 30, color: Colors.white),
                       ),
                     ),
                   ],
@@ -152,7 +147,7 @@ class _HomescreenState extends State<Homescreen> {
                     children: [
                       Text(
                         "More Products",
-                        style: TextStyle(fontSize: 30),
+                        style: TextStyle(fontSize: 30, color: Colors.white),
                       ),
                     ],
                   ),
@@ -237,8 +232,10 @@ class _HomescreenState extends State<Homescreen> {
                     Card(
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (ctx) => const YslItems()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (ctx) => const YslItems()));
                         },
                         child: SizedBox(
                             height: 100,
