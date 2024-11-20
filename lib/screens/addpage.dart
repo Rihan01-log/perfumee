@@ -22,7 +22,7 @@ class _AddpageState extends State<Addpage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: Text(
+        title: const Text(
           'PERFUMEE',
           style: TextStyle(fontStyle: FontStyle.italic),
         ),
@@ -30,12 +30,13 @@ class _AddpageState extends State<Addpage> {
       ),
       body: Column(
         children: [
-          Gap(30),
-          CircleAvatar(
+          const Gap(30),
+          const CircleAvatar(
             radius: 60,
           ),
-          Padding(
-            padding: const EdgeInsets.all(15),
+          ElevatedButton(onPressed: () {}, child: const Text('Image')),
+          const Padding(
+            padding: EdgeInsets.all(15),
             child: TextField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(), hintText: 'Name'),
@@ -51,7 +52,7 @@ class _AddpageState extends State<Addpage> {
               child: DropdownButton(
                 isExpanded: true,
                 value: newvalue,
-                hint: Text("brand"),
+                hint: const Text("brand"),
                 items: brands.map((String item) {
                   return DropdownMenuItem<String>(
                     value: item,
@@ -66,15 +67,15 @@ class _AddpageState extends State<Addpage> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(15),
+          const Padding(
+            padding: EdgeInsets.all(15),
             child: TextField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(), hintText: 'Price'),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(15),
+          const Padding(
+            padding: EdgeInsets.all(15),
             child: TextField(
               decoration: InputDecoration(
                   contentPadding:
@@ -85,13 +86,13 @@ class _AddpageState extends State<Addpage> {
           ),
           ElevatedButton(
             onPressed: () {},
-            child: Text('Submit'),
             style: ElevatedButton.styleFrom(
-                minimumSize: Size(
+                minimumSize: const Size(
                   200,
                   40,
                 ),
                 backgroundColor: Colors.amber),
+            child: const Text('Submit'),
           )
         ],
       ),

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:perfumee/bottomnavigation/navigation.dart';
-import 'package:perfumee/screens/homescreen.dart';
-import 'package:perfumee/screens/signin.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -18,7 +16,7 @@ class _LoginState extends State<Login> {
       body: Center(
         child: Container(
           decoration:
-              BoxDecoration(color: const Color.fromARGB(255, 247, 124, 115)),
+              const BoxDecoration(color: Color.fromARGB(255, 247, 124, 115)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -45,24 +43,24 @@ class _LoginState extends State<Login> {
               ElevatedButton.icon(
                 onPressed: () {
                   Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (ctx) => NavigatioPage()));
+                      MaterialPageRoute(builder: (ctx) => const NavigatioPage()));
                 },
                 style: ElevatedButton.styleFrom(
-                    minimumSize: Size(140, 40),
+                    minimumSize: const Size(140, 40),
                     backgroundColor: Colors.blueAccent),
-                label: Text('Login'),
-                icon: Icon(Icons.home),
+                label: const Text('Login'),
+                icon: const Icon(Icons.home),
               ),
-              Text('Don\'t have any acoount '),
-              Gap(10),
+              const Text('Don\'t have any acoount '),
+              const Gap(10),
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (ctx) => NavigatioPage()));
+                      MaterialPageRoute(builder: (ctx) => const NavigatioPage()));
                 },
-                child: Text('Sign In'),
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue, minimumSize: Size(140, 40)),
+                    backgroundColor: Colors.blue, minimumSize: const Size(140, 40)),
+                child: const Text('Sign In'),
               )
             ],
           ),

@@ -90,7 +90,7 @@ class _YslItemsState extends State<YslItems> {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (ctx) => Viewandbuy()));
+            context, MaterialPageRoute(builder: (ctx) => const Viewandbuy()));
       },
       child: Container(
         height: 160,

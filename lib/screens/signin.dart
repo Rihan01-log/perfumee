@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:perfumee/screens/homescreen.dart';
 
 class Signin extends StatefulWidget {
@@ -16,7 +15,7 @@ class _SigninState extends State<Signin> {
       body: Center(
         child: Container(
           decoration:
-              BoxDecoration(color: const Color.fromARGB(255, 247, 124, 115)),
+              const BoxDecoration(color: Color.fromARGB(255, 247, 124, 115)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -53,13 +52,13 @@ class _SigninState extends State<Signin> {
               ElevatedButton.icon(
                 onPressed: () {
                   Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (ctx) => Homescreen()));
+                      MaterialPageRoute(builder: (ctx) => const Homescreen()));
                 },
                 style: ElevatedButton.styleFrom(
-                    minimumSize: Size(140, 40),
+                    minimumSize: const Size(140, 40),
                     backgroundColor: Colors.blueAccent),
-                label: Text('SignIn'),
-                icon: Icon(Icons.home),
+                label: const Text('SignIn'),
+                icon: const Icon(Icons.home),
               ),
             ],
           ),

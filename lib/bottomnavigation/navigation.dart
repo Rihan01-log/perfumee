@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:perfumee/bottomnavigation/addpage.dart';
+import 'package:perfumee/screens/addpage.dart';
 import 'package:perfumee/screens/homescreen.dart';
 
 import 'package:perfumee/screens/piechart.dart';

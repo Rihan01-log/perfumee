@@ -26,8 +26,8 @@ class _HomescreenState extends State<Homescreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 228, 80, 130),
-        title: Text(
+        backgroundColor: const Color.fromARGB(255, 228, 80, 130),
+        title: const Text(
           'PERFUMEE',
           style: TextStyle(fontStyle: FontStyle.italic),
         ),
@@ -36,7 +36,7 @@ class _HomescreenState extends State<Homescreen> {
       body: SingleChildScrollView(
         child: Container(
           width: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
                 Color.fromARGB(255, 228, 80, 130),
@@ -47,12 +47,12 @@ class _HomescreenState extends State<Homescreen> {
             ),
           ),
           child: Padding(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Column(
               children: [
-                Gap(10),
-                Padding(
-                  padding: const EdgeInsets.all(12),
+                const Gap(10),
+                const Padding(
+                  padding: EdgeInsets.all(12),
                   child: Row(
                     children: [
                       Text(
@@ -83,11 +83,11 @@ class _HomescreenState extends State<Homescreen> {
                     autoPlay: true,
                   ),
                 ),
-                Gap(10),
-                Row(
+                const Gap(10),
+                const Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8.0),
                       child: Text(
                         'Offers',
                         style: TextStyle(fontSize: 30),
@@ -146,8 +146,8 @@ class _HomescreenState extends State<Homescreen> {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Row(
                     children: [
                       Text(
@@ -167,7 +167,7 @@ class _HomescreenState extends State<Homescreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (ctx) => Chanelitems()));
+                                  builder: (ctx) => const Chanelitems()));
                         },
                         child: Card(
                           child: SizedBox(
@@ -190,7 +190,7 @@ class _HomescreenState extends State<Homescreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (ctx) => Gucciitems()));
+                                  builder: (ctx) => const Gucciitems()));
                         },
                         child: SizedBox(
                           height: 100,
@@ -217,7 +217,7 @@ class _HomescreenState extends State<Homescreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (ctx) => Bvulgariitems()));
+                                  builder: (ctx) => const Bvulgariitems()));
                         },
                         child: Card(
                           child: SizedBox(
@@ -238,7 +238,7 @@ class _HomescreenState extends State<Homescreen> {
                       child: GestureDetector(
                         onTap: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (ctx) => YslItems()));
+                              MaterialPageRoute(builder: (ctx) => const YslItems()));
                         },
                         child: SizedBox(
                             height: 100,
