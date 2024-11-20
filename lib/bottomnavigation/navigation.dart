@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:perfumee/screens/addpage.dart';
+import 'package:perfumee/screens/dashboard.dart';
 import 'package:perfumee/screens/homescreen.dart';
 
-import 'package:perfumee/screens/piechart.dart';
 import 'package:perfumee/screens/profile.dart';
 
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
@@ -20,7 +20,7 @@ class _NavigatioPageState extends State<NavigatioPage> {
   final List<Widget> perfumeePages = [
     const Homescreen(),
     const Addpage(),
-    const Piechart(),
+    Dashboard(),
     const Profilepage(),
   ];
   @override
@@ -29,7 +29,7 @@ class _NavigatioPageState extends State<NavigatioPage> {
       body: perfumeePages[currentIndex],
       bottomNavigationBar: SalomonBottomBar(
           backgroundColor: Colors.black26,
-          selectedItemColor: Colors.black,
+          selectedItemColor: Colors.white,
           onTap: (index) {
             setState(() {
               currentIndex = index;

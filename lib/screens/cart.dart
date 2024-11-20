@@ -16,20 +16,26 @@ class _CartState extends State<Cart> {
       appBar: AppBar(
         title: const Text(
           'PERFUMEE',
-          style: TextStyle(fontStyle: FontStyle.italic),
+          style: TextStyle(fontStyle: FontStyle.italic, color: Colors.white),
         ),
         centerTitle: true,
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.black,
       ),
       body: GestureDetector(
         onTap: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (ctx) => Viewandbuy()));
+              context, MaterialPageRoute(builder: (ctx) => const Viewandbuy()));
         },
         child: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.black, Colors.white],
+              begin: Alignment.centerLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
           height: double.infinity,
           width: double.infinity,
-          color: Colors.red,
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: Column(
@@ -41,6 +47,7 @@ class _CartState extends State<Cart> {
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.amber),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(10),
@@ -63,13 +70,14 @@ class _CartState extends State<Cart> {
                             style: TextStyle(fontSize: 17),
                           ),
                           Text('M.R.p:₹10000'),
-                          Text('100 ml')
+                          Text('100 ml'),
                         ],
                       ),
+                      IconButton(onPressed: () {}, icon: const Icon(Icons.delete))
                     ],
                   ),
                 ),
-                Gap(12),
+                const Gap(12),
                 Container(
                   height: 130,
                   width: double.infinity,
@@ -77,6 +85,7 @@ class _CartState extends State<Cart> {
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.amber),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(10),
@@ -102,6 +111,7 @@ class _CartState extends State<Cart> {
                           Text('100 ml')
                         ],
                       ),
+                      IconButton(onPressed: () {}, icon: const Icon(Icons.delete))
                     ],
                   ),
                 )

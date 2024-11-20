@@ -46,6 +46,7 @@ class _AddpageState extends State<Addpage> {
             const Padding(
               padding: EdgeInsets.all(15),
               child: TextField(
+                style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Name',
@@ -83,6 +84,7 @@ class _AddpageState extends State<Addpage> {
             const Padding(
               padding: EdgeInsets.all(15),
               child: TextField(
+                style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Price',
@@ -92,6 +94,7 @@ class _AddpageState extends State<Addpage> {
             const Padding(
               padding: EdgeInsets.all(15),
               child: TextField(
+                style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                     contentPadding:
                         EdgeInsets.symmetric(vertical: 60, horizontal: 120),
@@ -101,7 +104,9 @@ class _AddpageState extends State<Addpage> {
               ),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                _addToCart('item added');
+              },
               style: ElevatedButton.styleFrom(
                   minimumSize: const Size(
                     200,
@@ -112,6 +117,15 @@ class _AddpageState extends State<Addpage> {
             )
           ],
         ),
+      ),
+    );
+  }
+
+  void _addToCart(String name) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('item added'),
+        duration: Duration(seconds: 2),
       ),
     );
   }

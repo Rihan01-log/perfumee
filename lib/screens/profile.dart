@@ -37,14 +37,14 @@ class _ProfilepageState extends State<Profilepage> {
               const CircleAvatar(
                 radius: 60,
               ),
-              IconButton(
+              ElevatedButton(
                 onPressed: () {},
-                icon: const Icon(Icons.edit),
+                child: const Text('Image'),
               ),
               const Gap(10),
               const Text(
                 'RIHAN.M',
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 20, color: Colors.white),
               ),
               Expanded(
                 child: Container(

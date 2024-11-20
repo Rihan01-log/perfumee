@@ -48,6 +48,7 @@ class _HomescreenState extends State<Homescreen> {
             child: Column(
               children: [
                 TextFormField(
+                  style: TextStyle(color: Colors.white),
                   decoration: const InputDecoration(
                       prefixIcon: Icon(Icons.search),
                       border: OutlineInputBorder(),
