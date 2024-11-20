@@ -14,6 +14,7 @@ class _SplashscreenState extends State<Splashscreen> {
     // TODO: implement initState
     super.initState();
     Future.delayed(const Duration(seconds: 3),() {
+      // ignore: use_build_context_synchronously
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (cts)=>const Login()));
     },);
   }

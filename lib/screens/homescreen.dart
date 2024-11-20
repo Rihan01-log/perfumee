@@ -47,6 +47,12 @@ class _HomescreenState extends State<Homescreen> {
             padding: const EdgeInsets.all(10),
             child: Column(
               children: [
+                TextFormField(
+                  decoration: const InputDecoration(
+                      prefixIcon: Icon(Icons.search),
+                      border: OutlineInputBorder(),
+                      hintText: 'Search your items'),
+                ),
                 const Gap(10),
                 const Padding(
                   padding: EdgeInsets.all(12),

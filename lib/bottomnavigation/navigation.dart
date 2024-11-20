@@ -18,16 +18,18 @@ class _NavigatioPageState extends State<NavigatioPage> {
   int currentIndex = 0;
 
   final List<Widget> perfumeePages = [
-    Homescreen(),
-    Addpage(),
-    Piechart(),
-    Profilepage(),
+    const Homescreen(),
+    const Addpage(),
+    const Piechart(),
+    const Profilepage(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: perfumeePages[currentIndex],
       bottomNavigationBar: SalomonBottomBar(
+          backgroundColor: Colors.black26,
+          selectedItemColor: Colors.black,
           onTap: (index) {
             setState(() {
               currentIndex = index;
@@ -35,12 +37,14 @@ class _NavigatioPageState extends State<NavigatioPage> {
           },
           currentIndex: currentIndex,
           items: [
-            SalomonBottomBarItem(icon: Icon(Icons.home), title: Text('Home')),
-            SalomonBottomBarItem(icon: Icon(Icons.add), title: Text('Add')),
             SalomonBottomBarItem(
-                icon: Icon(Icons.pie_chart), title: Text('Chart')),
+                icon: const Icon(Icons.home), title: const Text('Home')),
             SalomonBottomBarItem(
-                icon: Icon(Icons.person), title: Text('Profile'))
+                icon: const Icon(Icons.add), title: const Text('Add')),
+            SalomonBottomBarItem(
+                icon: const Icon(Icons.pie_chart), title: const Text('Chart')),
+            SalomonBottomBarItem(
+                icon: const Icon(Icons.person), title: const Text('Profile'))
           ]),
     );
   }
