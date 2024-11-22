@@ -146,7 +146,10 @@ class _YslItemsState extends State<YslItems> {
                         backgroundColor: Colors.yellow,
                         foregroundColor: Colors.black,
                       ),
-                      child: const Text("Add to Cart"),
+                      child: const Text(
+                        "Add to Cart",
+                        style: TextStyle(fontStyle: FontStyle.italic),
+                      ),
                     ),
                   ],
                 ),
