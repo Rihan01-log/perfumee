@@ -148,7 +148,9 @@ class _YslItemsState extends State<YslItems> {
                       ),
                       child: const Text(
                         "Add to Cart",
-                        style: TextStyle(fontStyle: FontStyle.italic),
+                        style: TextStyle(
+                            fontStyle: FontStyle.italic,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ],
